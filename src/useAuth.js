@@ -12,7 +12,6 @@ export default function useAuth(code) {
         code,
       })
       .then((res) => {
-        console.log(res);
         setAccessToken(res.data.accessToken);
         setRefreshToken(res.data.refreshToken);
         setExpiresIn(res.data.expiresIn);
@@ -23,7 +22,6 @@ export default function useAuth(code) {
       });
   }, [code]);
 
-  //refresh token once token has expired
   useEffect(() => {
     if (!refreshToken || !expiresIn) return;
     const interval = setInterval(() => {
@@ -38,7 +36,7 @@ export default function useAuth(code) {
         .catch(() => {
           window.location = '/';
         });
-    }, expiresIn - 60 * 1000);
+    }, (expiresIn - 60) * 1000);
 
     return () => clearInterval(interval);
   }, [refreshToken, expiresIn]);
