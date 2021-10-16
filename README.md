@@ -52,7 +52,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
- Special thanks to [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) for providing this amazing tutorial. 
+ Special thanks to [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) for the tutorial. 
 
 ## 🧾 License
 [MIT](https://choosealicense.com/licenses/mit/)
